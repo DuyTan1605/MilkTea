@@ -1,0 +1,15 @@
+KT hàm hideAutoScroll fSanPham
+Chỉnh lại kích thước các form cho dễ nhìn
+
+Thêm PROC vào DB để tìm Khách hàng
+CREATE PROC [dbo].[USP_SearchCustomerByName] @keyword nvarchar(50)
+AS
+BEGIN
+SELECT * FROM KHACHHANG WHERE HoTen LIKE '%' + @keyword + '%'
+END
+Thêm PROC tìm tên nl
+CREATE PROC [dbo].[USP_SearchMaterialByName] @keyword nvarchar(50)
+AS
+BEGIN
+SELECT * FROM NGUYENLIEU WHERE TenNguyenLieu LIKE '%' + @keyword + '%'
+END
